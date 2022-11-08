@@ -135,7 +135,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             Visibility(
-              // padding: const EdgeInsets.all(50.0),
               child: FloatingActionButton(
                 onPressed: _incrementCounter,
                 tooltip: 'Increment',
