@@ -122,22 +122,20 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: Padding(
-        padding: const EdgeInsets.only(left: 37.0),
+      floatingActionButton: Visibility(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            if(_counter > 0)
-              Padding(
-                padding: const EdgeInsets.all(50.0),
+              Visibility(
+                visible: (_counter > 0),
                 child: FloatingActionButton(
                   onPressed: _decrementCounter,
                   tooltip: 'Decrement',
                   child: const Icon(Icons.remove),
                 ),
               ),
-            Padding(
-              padding: const EdgeInsets.all(50.0),
+            Visibility(
+              // padding: const EdgeInsets.all(50.0),
               child: FloatingActionButton(
                 onPressed: _incrementCounter,
                 tooltip: 'Increment',
