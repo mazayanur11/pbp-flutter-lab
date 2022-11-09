@@ -30,4 +30,5 @@ Const dan final adalah modifier yang bersifat immutable sehingga tidak dapat diu
 3. Membuat fungsi _decrementCounter untuk mengurangi nilai dari _counter, yang di dalamnya terdapat setState() agar fungsi dapat dipanggil
 4. Membuat kondisi di children body untuk ganjil genap, jika  _counter bernilai ganjil maka akan menampilkan teks "GENAP" dengan warna merah. Namun, jika _counter bernilai genap maka akan menampilkan teks "GANJIL" dengan warna biru
 5. Membuat floatingActionButton dengan widget Visibility untuk membuat tombol dan membuat tombol menjadi ditampilkan/disembunyikan. 
-6. Membuat 2 child yang merupakan tombol "+" dan tombol "-". Jika _counter > 0 maka tombol "-" akan ditampilkan. Jika tombol "+" dipencet, akan memanggil fungsi _incrementCounter. Jika tombol "-" dipencet, akan memanggil fungsi _decrementCounter.
+6. Membuat 2 child yang merupakan tombol "+" dan tombol "-". Jika _counter > 0 maka tombol "-" akan ditampilkan. Jika tombol "+" dipencet, akan memanggil fungsi _incrementCounter. Jika tombol "-" dipencet, akan memanggil fungsi _decrementCounter
+7. Menjalankan "flutter run" untuk melihat tampilan app yang sudah dibuat
