@@ -22,7 +22,7 @@ Kelas   : C
 setState() memberi tahu framework Flutter bahwa ada sesuatu yang berubah dalam state, yang menyebabkannya menjalankan kembali metode build untuk menampilan nilai yang diperbarui. Jika kita mengubah _counter tanpa memanggil setState(), maka metode build tidak akan dipanggil lagi, jadi tidak terjadi apa-apa.
 
 ## Jelaskan perbedaan antara const dengan final.
-Const dan final adalah modifier yang bersifat immutable sehingga tidak dapat diubah. Namun terdapat perbedaan antar keduanya, const dideklarasikan sebelum runtime, sedangkan final dideklarasikan setelah runtime dan hanya untuk sekali. Oleh karen itu, nilai final akan diketahui pada saat runtime.
+Const dan final adalah modifier yang bersifat immutable sehingga tidak dapat diubah. Namun terdapat perbedaan antar keduanya, const dideklarasikan sebelum runtime, sedangkan final dideklarasikan setelah runtime dan hanya untuk sekali. Oleh karena itu, nilai final akan diketahui pada saat runtime.
 
 ## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
 1. Membuat proyek baru dengan cara menjalankan "flutter create counter_7" di cmd
