@@ -86,7 +86,7 @@ class _MyDataPageState extends State<MyDataPage> {
 }
 
 // Add ke data
-void addBudget(String judul, int nominal, String jenis, DateTime tanggal){
+void addData(String judul, int nominal, String jenis, DateTime tanggal){
   _MyDataPageState.listJudul.add(judul);
   _MyDataPageState.listNominal.add(nominal);
   _MyDataPageState.listPilihanJenis.add(jenis);

@@ -18,14 +18,6 @@ class _MyFormPageState extends State<MyFormPage> {
   String jenis = 'Pengeluaran';
   DateTime tanggal = DateTime.now();
 
-  final _controllerJudul = TextEditingController();
-  final _controllerNominal = TextEditingController();
-
-  void clearText() {
-    _judul = '';
-    nominal = 0;
-  }
-
   bool isNumeric(String value){
     return int.tryParse(value) != null;
   }
@@ -115,27 +107,23 @@ class _MyFormPageState extends State<MyFormPage> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Text(DateFormat('d-MMMM-yyy').format(tanggal), style: const TextStyle(fontSize: 15)),
-                      ElevatedButton(
-                    child: const Text("Pilih Tanggal", style: TextStyle(fontSize: 15)),
-                    style: ElevatedButton.styleFrom(
-                      foregroundColor: Theme.of(context).colorScheme.onSecondaryContainer,
-                      backgroundColor: Theme.of(context).colorScheme.secondaryContainer,
-                    ),
-                    onPressed: () {
-                      showDatePicker(
-                        context: context,
-                        initialDate: DateTime.now(),
-                        firstDate: DateTime(2000),
-                        lastDate: DateTime(2099),
+                      Text(DateFormat('EEEE, d-MMMM-yyy').format(tanggal), style: const TextStyle(fontSize: 15)),
+                      TextButton(
+                        child: const Text("Pilih Tanggal", style: TextStyle(fontSize: 15)),
+                        onPressed: () {
+                          showDatePicker(
+                            context: context,
+                            initialDate: DateTime.now(),
+                            firstDate: DateTime(2000),
+                            lastDate: DateTime(2099),
 
-                      ).then((date) {  // setState async untuk tanggal
-                        setState(() {
-                          tanggal = date!;
-                        });
-                      });
-                    },
-                  ),
+                          ).then((date) {  // setState async untuk tanggal
+                            setState(() {
+                              tanggal = date!;
+                            });
+                          });
+                        },
+                      ),
                     ],
                   ),
                 ),
@@ -168,24 +156,20 @@ class _MyFormPageState extends State<MyFormPage> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: TextButton(
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.blue),
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.blue),
+                    ),
+                    onPressed: () {
+                      if (_formKey.currentState!.validate()) {
+                        addData(_judul, nominal, jenis, tanggal);
+                        Navigator.push(context,MaterialPageRoute(builder: (context) => const MyDataPage()),);
+                      }
+                    },
+                    child: const Text(
+                      "Simpan",
+                      style: TextStyle(color: Colors.white, fontSize: 15),
+                    ),
                   ),
-                  onPressed: () {
-                    if (_formKey.currentState!.validate()) {
-                      addBudget(_judul, nominal, jenis, tanggal);
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const MyDataPage()),
-                      );
-                      clearText();
-                    }
-                  },
-                  child: const Text(
-                    "Save",
-                    style: TextStyle(color: Colors.white, fontSize: 15),
-                  ),
-                ),
                 ),
               ],
             ),

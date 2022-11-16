@@ -4,6 +4,8 @@ NPM     : 2106639485
 
 Kelas   : C
 
+## Tugas 7
+
 ## Jelaskan apa yang dimaksud dengan stateless widget dan stateful widget dan jelaskan perbedaan dari keduanya.
 - Stateless widget adalah widget yang hanya bertugas untuk menampilkan sesuatu secara statis. Tanpa melakukan tracking perubahan data dari waktu ke waktu. Intinya, tampilan dari stateless widget akan seperti itu-itu saja dan tidak ada mekanisme untuk memantau state perubahan aplikasi.
 - Stateful Widget merupakan widget yang dinamis. Ini berarti widget ini dapat merubah tampilannya sesuai response dari events yang dipicu baik dari interaksi user maupun adanya variabel atau nilai baru yang didapat. Stateful widget dapat mengubah atau mengupdate tampilan, menambah widget lainnya, mengubah nilai variabel, icon, warna dan masih banyak lagi.
@@ -32,3 +34,42 @@ Const dan final adalah modifier yang bersifat immutable sehingga tidak dapat diu
 5. Membuat floatingActionButton dengan widget Visibility untuk membuat tombol dan membuat tombol menjadi ditampilkan/disembunyikan. 
 6. Membuat 2 child yang merupakan tombol "+" dan tombol "-". Jika _counter > 0 maka tombol "-" akan ditampilkan. Jika tombol "+" dipencet, akan memanggil fungsi _incrementCounter. Jika tombol "-" dipencet, akan memanggil fungsi _decrementCounter
 7. Menjalankan "flutter run" untuk melihat tampilan app yang sudah dibuat
+
+## Tugas 8
+
+## Jelaskan perbedaan Navigator.push dan Navigator.pushReplacement
+- Navigator.push (): Metode push digunakan untuk menambahkan rute lain ke atas tumpukan screen (stack) saat ini. Halaman baru ditampilkan di atas halaman sebelumnya.
+- Navigator.pushReplacement() : Metode pushReplacement digunakan untuk menimpa/mengganti rute yang sekarang ke rute lain. Halaman baru ditampilkan dengan menggantikan halaman sebelumnya.
+
+## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya
+- Card: Untuk membentuk sebuah kartu dari data yang telah disubmit
+- Drawer: Panel untuk melakukan perpindahan tampilan atau navigator
+- TextFormField: Komponen untuk memasukkan input text
+- Form: Membuat sebuah container untuk dijadikan parent dari input input yang dideklarasikan
+- ListTile: Komponen yang didalamnya juga bisa digunakan widget
+- Column, Padding, Row: Mengatur posisi elemen secara horizontal dan vertikal, serta mengatur jarak antar elemen
+- DropDownButton: Membuat dropdown untuk memilih input
+- showDatePicker: Meminta input tanggal
+- TextStyle: Styling text
+- Container: Menampung beberapa komponen seperti div pada html
+- TextButton: Membuat tombol berbasis text untuk menampun action dari user
+
+## Sebutkan jenis-jenis event yang ada pada Flutter (contoh: onPressed)
+- OnPressed: fungsi yang dipanggil saat tombol ditekan
+- OnChange: mengubah value ke variabel yang dituju
+- OnSaved: menambahkan behavior saat data disimpan
+- OnTap: menampilkan teks secara langsung saat tombol ditekan
+- OnComplete: getter data saat tombol ditekan
+
+## Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter
+Navigator seperti stack untuk ditampilkan halaman yang muncul adalah yang paling atas. Ketika navitagor push, layer sebelumnya akan ditimpa dan tetap tersimpan di bawah layer yang baru, sementara pushreplacement akan mengganti layernya
+
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas
+1. Membuat drawer.dart dan memasukkan drawer untuk halaman main, data, dan form ke dalamnya, tak lupa juga import halaman yang dapat dituju melalui drawer.
+2. Membuat form.dart dan data.dart, kemudian menambahkan import drawer.dart ke semua halaman dan import ke halaman yang terkait, serta me-set drawer ke halaman drawer.dart yang sudah dibuat sebelumnya.
+3. Membuat variabel judul, nominal, tanggal, dan jenis pada form.dart untuk menampung input dari user.
+4. Membuat fungsi untuk memeriksa apakah input berupa angka atau tidak pada form.dart.
+5. Membuat method build pada form.dart yang berisi form untuk meminta input user serta tombol simpan untuk memasukkan datanya
+6. Membuat list array dari masing-masing jenis input untuk menampung semua input data dari user.
+7. Membuat method addData pada data.dart untuk mengambil input data dari user.
+8. Membuat card dari data-data yang sudah disumbit oleh user.
