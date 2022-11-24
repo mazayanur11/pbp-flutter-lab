@@ -88,7 +88,7 @@ Kita dapat mengambil data JSON tanpa membuat model terlebih dahulu. Data tersebu
 - ListView : Untuk mengelompokkan beberapa item
 - MaterialPageRoute : Untuk mengganti halaman yang ditampilkan
 - Container : Untuk menampung widget
-- BoxDecoration Untuk styling container
+- BoxDecoration : Untuk styling container
 - Column : Untuk membuat container berbasis kolom
 - ElevatedButton : Untuk membuat button
 
