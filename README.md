@@ -73,3 +73,34 @@ Navigator seperti stack untuk ditampilkan halaman yang muncul adalah yang paling
 6. Membuat list array dari masing-masing jenis input untuk menampung semua input data dari user.
 7. Membuat method addData pada data.dart untuk mengambil input data dari user.
 8. Membuat card dari data-data yang sudah disumbit oleh user.
+
+## Tugas 9
+
+## Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+Kita dapat mengambil data JSON tanpa membuat model terlebih dahulu. Data tersebut dapat dikirimkan dengan bentuk HTTP response. Namun, cara tersebut kurang efisien karena data akan sulit dilihat dan diakses, sehingga sebaiknya pengambilan data JSON dilakukan dengan membuat model saja.
+
+## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+- CheckBox : State untuk mengganti status (sudah ditonton atau belum)
+- FutureBuilder : Untuk membuat widget dan fetching data
+- SizedBox : Kotak untuk positioning
+- Text : Untuk membuat text
+- TextStyle Untuk styling text
+- ListView : Untuk mengelompokkan beberapa item
+- MaterialPageRoute : Untuk mengganti halaman yang ditampilkan
+- Container : Untuk menampung widget
+- BoxDecoration Untuk styling container
+- Column : Untuk membuat container berbasis kolom
+- ElevatedButton : Untuk membuat button
+
+## Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+Pertama, menambahkan terlebih dahulu dependancy http. Kemudian, membuat model dari data yang akan di GET. Selanjutnya, membuat HTTP Request untuk GET. Setelah itu, response didecode menjadi JSON kemudian dikonversi menjadi model yang dibuat sebelumnya. Terakhir, membuat widget/component menggunakan data yang diGET dengan memanfaatkan FutureBuilder.
+
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+1. Membuat my_watch_list_page.dart untuk menampilkan film-film yang ada di list.
+2. Menambahkan halaman tampilan MyWatchList ke dalam drawer agar dapat muncul di drawer semua halaman.
+3. Membuat model dari JSON tugas 3.
+4. Membuat folder api dan file fetchData.dart di dalamnya untuk fetch JSON tugas 3.
+5. Memanfaatkan method fecthWatchList di dalam fetchData.dart untuk menampilkan film-film yang ada di data JSON ke dalam my_watch_list_page.dart.
+5. Membuat watch_list_detail.dart untuk menampilkan detail dari film.
+6. Membuat onTap() pada setiap card berisi nama film untuk redirect ke halaman detail film dengan memanfaatkan MaterialPageRoute.
+7. Menampilkan detail film di watch_list_detail.dart dengan menggunakan data JSON yang diakses melalui model MyWatchList yang telah dibuat sebelumnya.

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:counter_7/main.dart';
-import 'package:counter_7/form.dart';
-import 'package:counter_7/data.dart';
+import 'package:counter_7/page/form.dart';
+import 'package:counter_7/page/data.dart';
+import 'package:counter_7/page/my_watch_list_page.dart';
 
 Widget returnMyDrawer(BuildContext context) {
   return Drawer(
@@ -31,6 +32,15 @@ Widget returnMyDrawer(BuildContext context) {
             Navigator.pushReplacement(
               context,
               MaterialPageRoute(builder: (context) => const MyDataPage()),
+            );
+          },
+        ),
+        ListTile(
+          title: const Text('My Watch List'),
+          onTap: () {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => const WatchListPage()),
             );
           },
         ),
